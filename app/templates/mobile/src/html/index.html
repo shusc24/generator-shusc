@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <title>首页</title>
+    <% include tpl/h5meta.html%>
+    <!--<script src="../js/lib/webLib/public/core/polyfill.min.js"></script>-->
+    <!-- build:js ../js/vendor.js-->
+    <script src="../js/lib/webLib/public/plus/adpPage/adpPage.js"></script>
+    <script src="../js/lib/webLib/require.min.js"></script>
+    <!-- endbuild -->
+    <script>
+        var requiredefine = define;
+    </script>
+    <script>
+        //requirejs 部分建议单独提出
+        requirejs.config({baseUrl:"../js",urlArgs:"v=1.0"});
+        requirejs.config({
+            paths:{
+                component:"component/vueCompoents",
+                lib:'../other/test/component.js'
+            }
+        });
+        requirejs.config({paths:{jquery:"https://cdn.bootcss.com/jquery/3.2.1/jquery.min",jqueryOne:"https://cdn.bootcss.com/jquery/1.12.4/jquery.min",jqueryTwo:"https://cdn.bootcss.com/jquery/2.2.4/jquery.min",Vue:"https://cdn.bootcss.com/vue/2.4.2/vue.min",VueOne:"https://cdn.bootcss.com/vue/1.0.28/vue.min",backbone:"https://cdn.bootcss.com/backbone.js/1.3.3/backbone-min",underscore:"https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min",lodash:"https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min",lodashCore:"https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min",Vuex:"https://cdn.bootcss.com/vuex/2.3.1/vuex.min",Vresource:["https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min"],Vrouter:["https://cdn.bootcss.com/vue-router/2.6.0/vue-router.min"],core:"lib/webLib/public/core/core",h5core:"lib/webLib/public/core/H5core",Class:"lib/webLib/public/core/libs/Base/Base",swiper:"https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min",swiper2:"https://cdn.bootcss.com/Swiper/2.7.6/idangerous.swiper.min",echarts:"https://cdn.bootcss.com/echarts/3.6.1/echarts.min",sweetalert:"https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min",weixin:"http://res.wx.qq.com/open/js/jweixin-1.1.0",popper:"https://cdn.bootcss.com/popper.js/1.9.1/popper.min",cropper:"https://cdn.bootcss.com/cropper/3.0.0-alpha.1/cropper.min",layer:"https://cdn.bootcss.com/layer/3.0.1/layer.min",socketIo:"https://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.",dynamics:"https://cdn.bootcss.com/dynamics.js/1.1.5/dynamics.min",director:"https://cdn.bootcss.com/Director/1.2.8/director.min",zui:"lib/webLib/public/plus/zui/zui",pagination:"lib/webLib/public/plus/pagination/lib/jquery.pagination",wangEditor:"lib/webLib/public/plus/wangEditor/js/wangEditor.min",lazyload:"lib/webLib/public/plus/lazyload/lazyload.min",store:"lib/webLib/public/plus/store/store.min",owlCarousel:"lib/Welib/public/plus/owlCarousel/owl.carousel",SMV:"lib/webLib/public/plus/SMValidator/SMValidator.min",SMVRules:"lib/webLib/public/plus/SMValidator/SMVRules",text:"https://cdn.bootcss.com/require-text/2.0.12/text.min",domReady:"https://cdn.bootcss.com/require-domReady/2.0.1/domReady.min",css:"https://cdn.bootcss.com/require-css/0.1.10/css.min",backboneLocal:"https://cdn.staticfile.org/backbone-localstorage.js/1.1.16/backbone.localStorage-min",AlloyFinger:"lib/webLib/public/plus/AlloyFinger/alloy_finger",flow:"lib/webLib/public/plus/layuiflow/flow",scrollreveal:"https://cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min",iscroll:"https://cdn.bootcss.com/iScroll/5.2.0/iscroll.min",xregexp:"https://cdn.bootcss.com/xregexp/3.1.1/xregexp-all.min",anime:"https://cdn.bootcss.com/animejs/2.0.0/anime.min",clipboard:"https://cdn.bootcss.com/clipboard.js/1.6.1/clipboard.min",mobilebone:"https://cdn.bootcss.com/mobilebone/2.6.1/mobilebone.min",cookies:"https://cdn.bootcss.com/js-cookie/2.1.3/js.cookie.min",cleave:"https://cdn.bootcss.com/cleave.js/0.7.15/cleave.min",velocity:"https://cdn.bootcss.com/velocity/1.5.0/velocity.min",velocityUi:"https://cdn.bootcss.com/velocity/1.5.0/velocity.ui.min",handlebars:"https://cdn.bootcss.com/handlebars.js/4.0.6/handlebars.min",scollfix:"lib/webLib/public/plus/scrollfix/scrollfix.min",lightbox:"https://cdn.bootcss.com/lightbox2/2.9.0/js/lightbox.min",ScrollMagic:"https://cdn.bootcss.com/ScrollMagic/2.0.5/ScrollMagic.min",ScrollMagicV:"https://cdn.bootcss.com/ScrollMagic/2.0.5/plugins/animation.velocity.min",Marquee:"https://cdn.bootcss.com/jQuery.Marquee/1.3.94/jquery.marquee.min",juge:"lib/webLib/user/shusc/juge/juge",moment:"https://cdn.bootcss.com/moment.js/2.18.1/moment.min",zepto:"https://cdn.bootcss.com/zepto/1.2.0/zepto.min",vueg:"lib/webLib/public/plus/vueg/vueg",home:"page/home",helpcenter:"page/helpcenter",contactus:"page/contactus",investment:"page/investment",classify:"page/classify",goods:"page/goods",goodsDetails:"page/goodsDetails",article:"page/article",articleTpl:"../html/article.html",classifyTpl:"../html/classify.html",helpcenterTpl:"../html/helpcenter.html",contactusTpl:"../html/contactUs.html",investmentTpl:"../html/investment.html",goodsTpl:"../html/goods.html",goodsDetailsTpl:"../html/goodsDetails.html",homeTpl:"../html/home.html",axios:"https://cdn.bootcss.com/axios/0.16.2/axios.min",slideout:"https://cdn.bootcss.com/slideout/1.0.1/slideout.min",layzr:"https://cdn.bootcss.com/layzr.js/2.2.2/layzr.min"},shim:{layer:["jquery","css!https://cdn.bootcss.com/layer/3.0.1/skin/default/layer.min.css"],zui:["jquery"],AlloyFinger:{dep:[],exports:"AlloyFinger"},sweetalert:["css!https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css"],swiper2:["css!https://cdn.bootcss.com/Swiper/2.7.6/idangerous.swiper.min.css"],cropper:["jquery","css!https://cdn.bootcss.com/cropper/3.0.0-alpha.1/cropper.min.css"],director:{exports:"Router"},flow:["jquery","css!lib/webLib/public/plus/layuiflow/flow.css"],mobilebone:["css!https://cdn.bootcss.com/mobilebone/2.6.1/mobilebone.min.css"],cleave:["https://cdn.bootcss.com/cleave.js/0.7.14/addons/cleave-phone.cn.js"],scollfix:["jquery"],lightbox:["css!https://cdn.bootcss.com/lightbox2/2.9.0/css/lightbox.min.css"],velocityUi:["velocity"],Marquee:["jquery"],swiper:["css!https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css"]}});
+        (function(){if(window["adaptive"]){window["adaptive"].desinWidth=640;window["adaptive"].baseFont=24;window["adaptive"].init()}}());
+    </script>
+    <script src="../other/test/component.js"></script>
+</head>
+<body class="homepage page">
+
+
+<div id="App">
+
+
+    <div class="page-loading" v-if="loading">
+
+        <img src="../img/index/pageLoading.gif" alt="">
+
+    </div>
+
+    <transition name="pagefade">
+
+        <div class="page-main" v-if="!loading" v-cloak="">
+
+        <Back-top></Back-top>
+
+
+        <i-header>
+            <img class="title-logo" src="../img/common/logo.png" alt="" slot="logo">
+            <template slot="swiper">
+                <div class="swiper-slide">
+                    <img src="../img/index/banner.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/index/banner.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/index/banner.png" alt="">
+                </div>
+            </template>
+            <template slot="list">
+                <li>
+                    <a href="">主页</a>
+                </li>
+                <li>
+                    <a href="">案例展示</a>
+                </li>
+                <li>
+                    <a href="">关于我们</a>
+                </li>
+                <li>
+                    <a href="">联系我们</a>
+                </li>
+                <li>
+                    <a href="">联系我们</a>
+                </li>
+                <li>
+                    <a href="">联系我们</a>
+                </li>
+            </template>
+        </i-header>
+
+        <!--home-brand 开始-->
+        <div class="home-brand">
+
+            <ul class="brand">
+
+                <li class="brand-item">
+                    <a href="javascript:">
+                        <img src="../img/index/h5_0.jpg" alt="">
+                    </a>
+
+                </li>
+
+                <li class="brand-item">
+                    <a href="javascript:">
+                        <img src="../img/index/h5_1.jpg" alt="">
+                    </a>
+                </li>
+
+                <li class="brand-item">
+                    <a href="javascript:">
+                        <img src="../img/index/h5_3.jpg" alt="">
+                    </a>
+
+                </li>
+
+                <li class="brand-item">
+                    <a href="javascript:">
+                        <img src="../img/index/h5_4.jpg" alt="">
+                    </a>
+                </li>
+
+                <li class="brand-item">
+                    <a href="javascript:">
+                        <img src="../img/index/h5_5.jpg" alt="">
+                    </a>
+
+                </li>
+
+                <li class="brand-item">
+                    <a href="javascript:">
+                        <img src="../img/index/h5_6.jpg" alt="">
+                    </a>
+                </li>
+
+                <li class="brand-item">
+                    <a href="javascript:">
+                        <img src="../img/index/h5_7.jpg" alt="">
+                    </a>
+
+                </li>
+
+                <li class="brand-item">
+                    <a href="javascript:">
+                        <img src="../img/index/h5_0.jpg" alt="">
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+        <!--home-brand 结束-->
+
+        <!--home-textbox 开始-->
+        <div class="home-textbox">
+            <div class="textbox">
+
+                <h3>
+                    专注电商设计这一件事
+                </h3>
+
+                <p>
+                    思代儿集团成立于2014年8月，由多位专业经验丰富的互联网设计师/计算机工程师联合创立。经过近3年的发展，思代儿已经为来自于淘宝、天猫、京东、聚划算/诚信通/速卖通/亚马逊/微商等平台商家提供网上设计服务/平台开发/自媒体营销服务，其中包括海尔/恒源祥/苏泊尔/思念食品/SOG/查蒙蒂纳/SHEFFIELD(谢菲德)等国内外知名品牌。在过去的几年中，我们为客户及合作伙伴提供了高质量、高性价比、高满意度的优质服务，
+                    得益于我们拥有一支专业、敬业、精业的成熟团队，并赢得了口碑和肯定，也赢得了团队的不断发展和壮大。
+                </p>
+
+            </div>
+        </div>
+        <!--home-textbox 结束-->
+
+        <!--home-works 开始-->
+        <div class="home-works">
+
+            <div class="works">
+
+                <div class="works-title">
+                    SEE OURWORKS
+                </div>
+
+                <div class="works-nav">
+
+                    <ul class="MTR-30 MBR-30">
+                        <template v-for="(item,index) in ['All','整店设计','首页设计','详情页设计','活动页设计','其他设计']">
+                            <li :class="{active:works.id == index}" @click="swtichNav(index)">{{item}}</li>
+                        </template>
+                    </ul>
+
+                </div>
+
+                <ul class="works-list" v-if="!works.loading">
+
+                    <li v-for="item in works.list">
+                        <a :href="item.href">
+                            <img v-lazy="item.imgpath" src="" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="works-list-loading" v-if="works.loading">
+                    <Spin></Spin>
+                </div>
+
+            </div>
+
+        </div>
+        <!--home-works 结束-->
+
+        <!--c-foonter 开始-->
+        <footer class="c-foonter">
+
+            <div class="footer">
+
+                <div class="footer-left">
+
+                    <img src="../img/common/footerlogo.jpg" alt="">
+
+                    <div class="footer-left-main" style="left: -1.1rem;top: 0.2rem;">
+                        <p>杭州市拱墅区祥园路28号乐富智汇园1幢201室</p>
+                        <p>TEL：0571-58587560</p>
+                        <p>QQ：2634278839</p>
+                        <p>浙ICP备17031518号</p>
+                        <p>Style Design 2014-2017</p>
+                    </div>
+
+                    <div class="footer-left-main" style="left: -1.1rem;top: 1.8rem;">
+                        <p>本网站设计、源代码及其中所展示之作品著作权均属于</p>
+                        <p>杭州思代儿广告设计保有所有权利。</p>
+                    </div>
+
+                </div>
+
+                <div class="footer-right">
+
+                    <div class="footer-right-logo">
+                        <img src="../img/common/qrcord.jpg" alt="">
+                    </div>
+
+                    <p class="footer-right-note">
+                        思代儿企业店铺
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+        <!--c-foonter 结束-->
+
+
+    </div>
+
+    </transition>
+
+</div>
+
+<script>
+    require(['vue','lodash','component','vuelazy','jquery','BackTop','Spin'], function (Vue,lodash,component,vuelazy,$,BackTop,Spin) {
+        Vue.use(vuelazy,{
+            preLoad: 1.3,
+            loading: '../img/index/loading.gif',
+            attempt: 1
+        });
+        var App = new Vue({
+            el:"#App",
+            data:{
+                loading:true,
+                works:{
+                    id:0,
+                    loading:true,
+                    list:[]
+                },
+                screen:{
+                    height:document.documentElement.clientHeight
+                }
+            },
+            mounted:function () {
+                var self = this;
+                self.loading = false;
+                _.delay(function () {
+                    self.swtichNav(0);
+                },500)
+            },
+            components:{
+                'i-header':component.topMenu,
+                "back-top":BackTop,
+                "spin":Spin,
+            },
+            methods:{
+                swtichNav:function (index) {
+                    var self = this;this.works.id = index;this.works.loading =true;
+                    $.get("http://www.easy-mock.com/mock/599d37f6059b9c566dccbc2b/style/works",{id:index}).done(function (Rs) {
+                        _.delay(function () {
+                            self.works.list = Rs;self.works.loading =false;
+                        },500)
+                    })
+                }
+            }
+        })
+    })
+</script>
+
+</body>
+</html>

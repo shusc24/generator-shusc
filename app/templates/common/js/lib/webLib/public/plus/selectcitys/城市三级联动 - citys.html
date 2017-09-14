@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://jquerywidget.com/jquery-citys/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>城市三级联动 - citys</title>
+        <link rel="shortcut icon" href="http://jquerywidget.com/public/image/favicon.png">
+        <link rel="stylesheet" type="text/css" href="./城市三级联动 - citys_files/cssreset-min.css">
+        <link rel="stylesheet" type="text/css" href="./城市三级联动 - citys_files/common.css">
+        <style type="text/css">
+            .citys{
+                margin-bottom: 25px;
+            }
+            .citys p{
+                line-height: 28px;
+            }
+            table a{
+                margin-right: 8px;
+                color: #369;
+            }
+        </style>
+        <script type="text/javascript" src="./城市三级联动 - citys_files/jquery.min.js.下载"></script>
+        <script type="text/javascript" src="./城市三级联动 - citys_files/jquery.citys.js.下载"></script>
+    <style>#BAIDU_DSPUI_FLOWBAR,.adsbygoogle,.ad,div[class^="ad-widsget"],div[id^="div-gpt-ad-"],a[href*="@"][href*=".exe"],a[href*="/?/"][href*=".exe"],.adpushwin{display:none !important;}</style></head>
+    <body>
+        <div class="main">
+            <div id="demo" class="citys">
+                <p>
+                    <select name="province"><option value="110000">北京市</option><option value="120000">天津市</option><option value="130000">河北省</option><option value="140000">山西省</option><option value="150000">内蒙古自治区</option><option value="210000">辽宁省</option><option value="220000">吉林省</option><option value="230000">黑龙江省</option><option value="310000">上海市</option><option value="320000">江苏省</option><option value="330000">浙江省</option><option value="340000">安徽省</option><option value="350000">福建省</option><option value="360000">江西省</option><option value="370000">山东省</option><option value="410000">河南省</option><option value="420000">湖北省</option><option value="430000">湖南省</option><option value="440000">广东省</option><option value="450000">广西壮族自治区</option><option value="460000">海南省</option><option value="500000">重庆市</option><option value="510000">四川省</option><option value="520000">贵州省</option><option value="530000">云南省</option><option value="540000">西藏自治区</option><option value="610000">陕西省</option><option value="620000">甘肃省</option><option value="630000">青海省</option><option value="640000">宁夏回族自治区</option><option value="650000">新疆维吾尔自治区</option><option value="710000">台湾省</option><option value="810000">香港特别行政区</option><option value="820000">澳门特别行政区</option></select>
+                    <select name="city"><option value="350100">福州市</option><option value="350200">厦门市</option><option value="350300">莆田市</option><option value="350400">三明市</option><option value="350500">泉州市</option><option value="350600">漳州市</option><option value="350700">南平市</option><option value="350800">龙岩市</option><option value="350900">宁德市</option></select>
+                    <select name="area"><option value="350203">思明区</option><option value="350205">海沧区</option><option value="350206">湖里区</option><option value="350211">集美区</option><option value="350212">同安区</option><option value="350213">翔安区</option></select>
+                </p>
+            </div>
+            <div class="code">
+                <p>通过地区编码初始化设置</p>
+                <p>$('#demo').citys({nodata:'hidden',code:350206});</p>
+            </div>
+            <script type="text/javascript">
+                $('#demo').citys({nodata:'hidden',code:350206});
+            </script>
+            <div id="demo1" class="citys">
+                <p>
+                    <select name="province"><option value="110000">北京市</option><option value="120000">天津市</option><option value="130000">河北省</option><option value="140000">山西省</option><option value="150000">内蒙古自治区</option><option value="210000">辽宁省</option><option value="220000">吉林省</option><option value="230000">黑龙江省</option><option value="310000">上海市</option><option value="320000">江苏省</option><option value="330000">浙江省</option><option value="340000">安徽省</option><option value="350000">福建省</option><option value="360000">江西省</option><option value="370000">山东省</option><option value="410000">河南省</option><option value="420000">湖北省</option><option value="430000">湖南省</option><option value="440000">广东省</option><option value="450000">广西壮族自治区</option><option value="460000">海南省</option><option value="500000">重庆市</option><option value="510000">四川省</option><option value="520000">贵州省</option><option value="530000">云南省</option><option value="540000">西藏自治区</option><option value="610000">陕西省</option><option value="620000">甘肃省</option><option value="630000">青海省</option><option value="640000">宁夏回族自治区</option><option value="650000">新疆维吾尔自治区</option><option value="710000">台湾省</option><option value="810000">香港特别行政区</option><option value="820000">澳门特别行政区</option></select>
+                    <select name="city"><option value="350100">福州市</option><option value="350200">厦门市</option><option value="350300">莆田市</option><option value="350400">三明市</option><option value="350500">泉州市</option><option value="350600">漳州市</option><option value="350700">南平市</option><option value="350800">龙岩市</option><option value="350900">宁德市</option></select>
+                    <select name="area"><option value="350203">思明区</option><option value="350205">海沧区</option><option value="350206">湖里区</option><option value="350211">集美区</option><option value="350212">同安区</option><option value="350213">翔安区</option></select>
+                </p>
+            </div>
+            <div class="code">
+                <p>通过地区名称初始化设置</p>
+                <p>$('#demo1').citys({province:'福建',city:'厦门',area:'思明'});</p>
+            </div>
+            <script type="text/javascript">
+                $('#demo1').citys({province:'福建',city:'厦门',area:'思明'});
+            </script>
+            <div id="demo2" class="citys">
+                <p>
+                    <select name="province"><option value=""> - 请选择 - </option><option value="110000">北京市</option><option value="120000">天津市</option><option value="130000">河北省</option><option value="140000">山西省</option><option value="150000">内蒙古自治区</option><option value="210000">辽宁省</option><option value="220000">吉林省</option><option value="230000">黑龙江省</option><option value="310000">上海市</option><option value="320000">江苏省</option><option value="330000">浙江省</option><option value="340000">安徽省</option><option value="350000">福建省</option><option value="360000">江西省</option><option value="370000">山东省</option><option value="410000">河南省</option><option value="420000">湖北省</option><option value="430000">湖南省</option><option value="440000">广东省</option><option value="450000">广西壮族自治区</option><option value="460000">海南省</option><option value="500000">重庆市</option><option value="510000">四川省</option><option value="520000">贵州省</option><option value="530000">云南省</option><option value="540000">西藏自治区</option><option value="610000">陕西省</option><option value="620000">甘肃省</option><option value="630000">青海省</option><option value="640000">宁夏回族自治区</option><option value="650000">新疆维吾尔自治区</option><option value="710000">台湾省</option><option value="810000">香港特别行政区</option><option value="820000">澳门特别行政区</option></select>
+                    <select name="city" disabled=""><option value=""> - 请选择 - </option></select>
+                    <select name="area" disabled=""><option value=""> - 请选择 - </option></select>
+                </p>
+                <p id="place">&nbsp;</p>
+            </div>
+            <div class="code">
+            <p>事件处理</p>
+<pre>$('#demo2').citys({
+    required:false,
+    nodata:'disabled',
+    onChange:function(data){
+        var text = data['direct']?'(直辖市)':'';
+        $('#place').text('当前选中地区：'+data['province']+text+' '+data['city']+' '+data['area']);
+    }
+});
+</pre>
+            </div>
+            <script type="text/javascript">
+                $('#demo2').citys({
+                    required:false,
+                    nodata:'disabled',
+                    onChange:function(data){
+                        var text = data['direct']?'(直辖市)':'';
+                        $('#place').text('当前选中地区：'+data['province']+text+' '+data['city']+' '+data['area']);
+                    }
+                });
+            </script>
+        	<div id="demo3" class="citys">
+                <p>
+                    <select name="province"><option value="110000">北京市</option><option value="120000">天津市</option><option value="130000">河北省</option><option value="140000">山西省</option><option value="150000">内蒙古自治区</option><option value="210000">辽宁省</option><option value="220000">吉林省</option><option value="230000">黑龙江省</option><option value="310000">上海市</option><option value="320000">江苏省</option><option value="330000">浙江省</option><option value="340000">安徽省</option><option value="350000">福建省</option><option value="360000">江西省</option><option value="370000">山东省</option><option value="410000">河南省</option><option value="420000">湖北省</option><option value="430000">湖南省</option><option value="440000">广东省</option><option value="450000">广西壮族自治区</option><option value="460000">海南省</option><option value="500000">重庆市</option><option value="510000">四川省</option><option value="520000">贵州省</option><option value="530000">云南省</option><option value="540000">西藏自治区</option><option value="610000">陕西省</option><option value="620000">甘肃省</option><option value="630000">青海省</option><option value="640000">宁夏回族自治区</option><option value="650000">新疆维吾尔自治区</option><option value="710000">台湾省</option><option value="810000">香港特别行政区</option><option value="820000">澳门特别行政区</option></select>
+                    <select name="city"><option value="350100">福州市</option><option value="350200">厦门市</option><option value="350300">莆田市</option><option value="350400">三明市</option><option value="350500">泉州市</option><option value="350600">漳州市</option><option value="350700">南平市</option><option value="350800">龙岩市</option><option value="350900">宁德市</option></select>
+                    <select name="area"><option value="350203">思明区</option><option value="350205">海沧区</option><option value="350206">湖里区</option><option value="350211">集美区</option><option value="350212">同安区</option><option value="350213">翔安区</option></select>
+                    <select name="town" style="display: inline-block;"><option value="350203001">厦港街道</option><option value="350203003">中华街道</option><option value="350203005">滨海街道</option><option value="350203006">鹭江街道</option><option value="350203007">开元街道</option><option value="350203008">梧村街道</option><option value="350203009">筼筜街道</option><option value="350203010">莲前街道</option><option value="350203011">嘉莲街道</option><option value="350203012">鼓浪屿街道</option></select>
+                </p>
+                <p id="place">&nbsp;</p>
+            </div>
+            <div class="code">
+              <p>扩展显示行政区划第四级(街道)信息：</p>
+<pre>    var $town = $('#demo3 select[name="town"]');
+    var townFormat = function(info){
+    $town.hide().empty();
+    if(info['code']%1e4&amp;&amp;info['code']&lt;7e6){	//是否为“区”且不是港澳台地区
+    	$.ajax({
+    		url:'http://passer-by.com/data_location/town/'+info['code']+'.json',
+    		dataType:'json',
+    		success:function(town){
+    			$town.show();
+    			for(i in town){
+    					$town.append('&lt;option value="'+i+'"&gt;'+town[i]+'&lt;/option&gt;');
+    			}
+    		}
+    	});
+    }
+    };
+    $('#demo3').citys({
+        province:'福建',
+        city:'厦门',
+        area:'思明',
+        onChange:function(info){
+        	townFormat(info);
+        }
+    },function(api){
+        var info = api.getInfo();
+        townFormat(info);
+    });
+</pre>
+            </div>
+            <script type="text/javascript">
+        		var $town = $('#demo3 select[name="town"]');
+        		var townFormat = function(info){
+        			$town.hide().empty();
+        			if(info['code']%1e4&&info['code']<7e5){	//是否为“区”且不是港澳台地区
+        				$.ajax({
+        					url:'http://passer-by.com/data_location/town/'+info['code']+'.json',
+        					dataType:'json',
+        					success:function(town){
+        						$town.show();
+        						for(i in town){
+        								$town.append('<option value="'+i+'">'+town[i]+'</option>');
+        						}
+        					}
+        				});
+        			}
+        		};
+                $('#demo3').citys({
+        			province:'福建',
+        			city:'厦门',
+        			area:'思明',
+        			onChange:function(info){
+        				townFormat(info);
+        			}
+        		},function(api){
+        			var info = api.getInfo();
+        			townFormat(info);
+        		});
+            </script>
+            <div class="example">
+                <div class="call">
+                    <h1>调用方法：</h1>
+                    <p>$(selector).citys(options,callback);</p>
+                </div>
+                <h2> options参数</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="150">参数</th>
+                            <th width="120">默认值</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>dataUrl</td>
+                            <td>[数据库地址]</td>
+                            <td>
+                              <p>最新数据库（2016年8月）：<a href="http://passer-by.com/data_location/list.json" target="_blank">JSON格式</a><a href="http://passer-by.com/data_location/list.jsonp" target="_blank">JSONP格式</a></p>
+                              <p>数据库项目：<a href="https://github.com/mumuy/data_location" target="_blank">中国行政区划（省、市、区、街道）</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>dataType</td>
+                            <td>'json'</td>
+                            <td>数据库类型:'json'或'jsonp'</td>
+                        </tr>
+                        <tr>
+                            <td>provinceField</td>
+                            <td>'province'</td>
+                            <td>省份(省级)字段名</td>
+                        </tr>
+                        <tr>
+                            <td>cityField</td>
+                            <td>'city'</td>
+                            <td>城市(地级)字段名</td>
+                        </tr>
+                        <tr>
+                            <td>areaField</td>
+                            <td>'area'</td>
+                            <td>地区(县区级)字段名</td>
+                        </tr>
+                        <tr>
+                            <td>code</td>
+                            <td>0</td>
+                            <td>地区编码</td>
+                        </tr>
+                        <tr>
+                            <td>province</td>
+                            <td>[无]</td>
+                            <td>省份(省级),可以为地区编码或者名称</td>
+                        </tr>
+                        <tr>
+                            <td>city</td>
+                            <td>[无]</td>
+                            <td>城市(地级),可以为地区编码或者名称</td>
+                        </tr>
+                        <tr>
+                            <td>area</td>
+                            <td>[无]</td>
+                            <td>地区(县区级),可以为地区编码或者名称</td>
+                        </tr>
+                        <tr>
+                            <td>required</td>
+                            <td>true</td>
+                            <td>是否必须选中(是否自动选择地区)</td>
+                        </tr>
+                        <tr>
+                            <td>nodata</td>
+                            <td>'hidden'</td>
+                            <td>当无数据时的表现形式:'hidden'隐藏,'disabled'禁用,为空不做任何处理</td>
+                        </tr>
+                        <tr>
+                            <td>onChange</td>
+                            <td>[无]</td>
+                            <td>地区切换时触发,回调函数传入地区信息:direct是否为直辖市,province省份(省级)名称,city城市(地级)名称,area地区(县区级)名称,code地区编码</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>callback(api)参数</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="200">方法</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>getInfo(data)</td>
+                            <td>获取当前选中的地区信息:direct是否为直辖市,province省份(省级)名称,city城市(地级)名称,area地区(县区级)名称,code地区编码</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div style="display: none;">
+            <script src="./城市三级联动 - citys_files/z_stat.php"></script>
+        </div>
+    
+
+</body></html>

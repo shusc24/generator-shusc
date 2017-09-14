@@ -1,0 +1,19 @@
+.zUIpanelScrollBox,
+.zUIpanelScrollBar {
+	width: 10px;
+	top: 4px;
+	right: 2px;
+	border-radius: 5px;
+}
+
+.zUIpanelScrollBox {
+	background: black;
+	opacity: 0.1;
+	filter: alpha(opacity=10);
+}
+
+.zUIpanelScrollBar {
+	background: #fff;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}

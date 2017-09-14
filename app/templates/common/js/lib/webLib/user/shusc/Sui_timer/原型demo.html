@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>时间</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div class="clock">
+    <div class="clock-num" id="clock1">
+        200
+    </div>
+</div>
+
+<div class="clock2">
+    <div class="clock-num" id="clock2">
+        300
+    </div>
+</div>
+
+<div class="clock2">
+    <div class="clock-num" id="clock3">
+        300
+    </div>
+</div>
+
+<script>
+
+    function formatSeconds(value) {
+        var theTime = parseInt(value);// 秒
+        var theTime1 = 0;// 分
+        var theTime2 = 0;// 小时
+        if (theTime > 60) {
+            theTime1 = parseInt(theTime / 60);
+            theTime = parseInt(theTime % 60);
+            if (theTime1 > 60) {
+                theTime2 = parseInt(theTime1 / 60);
+                theTime1 = parseInt(theTime1 % 60);
+            }
+        }
+        var result = "" + parseInt(theTime) + "秒";
+        if (theTime1 > 0) {
+            result = "" + parseInt(theTime1) + "分" + result;
+        }
+        if (theTime2 > 0) {
+            result = "" + parseInt(theTime2) + "小时" + result;
+        }
+
+        return result;
+    }
+
+
+    var sui_timer = (function () {
+        function sui_timer(num, period, showfn) {
+            //num 为内部状态 ,period 为周期 1000，event为事件闹钟, outEle为 输出的外部时间 eventcache 为事件缓存处理
+            this.num = num;
+            this._num = num;
+
+            this.showfn = showfn;
+            this.period = period;
+            this.fn;
+
+            this.Eventcache = [];
+
+            this.init();
+        }
+
+        sui_timer.prototype = {
+
+            constructor: sui_timer,
+
+            start: function () {
+                var period = this.period
+
+                this.fn = (function () {
+
+                    return setInterval(function () {
+
+                        this.showfn(this.num--)
+
+                    }.bind(this), period);
+
+                }.bind(this))()
+
+            },
+
+            stop: function () {
+                window.clearInterval(this.fn);
+                this.reset();
+            },
+
+            reset: function (val) {
+                if (typeof(val) != "undefined") {
+                    this.num = val;
+                } else {
+                    this.num = 0;
+                }
+            },
+
+            pause: function () {
+                window.clearInterval(this.fn);
+            },
+
+            addEvent: function (time, fn) {
+                //time 为
+
+                var Eventfn = function (val) {
+                    var Ttime = time
+                    var Tfn = fn
+
+                    if (Ttime == val) {
+                        Tfn();
+                    }
+                }
+
+                this.Eventcache.push(Eventfn)
+                console.log(this.Eventcache);
+            },
+
+            init: function () {
+                var self = this;
+
+                Object.defineProperty(this, "num", {
+                    set: function (val) {
+                        this._num = val
+                    },
+
+                    get: function () {
+
+                        //循环在时间对象中处理
+                        for (var i = 0; i < self.Eventcache.length; i++) {
+                            self.Eventcache[i](this._num);
+                        }
+
+                        return this._num
+                    }
+                })
+            }
+        }
+        return sui_timer;
+    })()
+
+    var demo = new sui_timer(10, 1000, function (val) {
+        $("#clock1").html(formatSeconds(val));
+    });
+
+    demo.addEvent(0, function () {
+        demo.stop();
+        alert("到时了");
+        $("#clock1").html("");
+    })
+
+    demo.addEvent(4, function () {
+        alert("123456")
+    })
+
+</script>
+
+</body>
+
+</html>

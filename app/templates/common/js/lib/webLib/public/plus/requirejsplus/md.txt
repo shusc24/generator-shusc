@@ -1,0 +1,9 @@
+1.text
+https://github.com/requirejs/text
+
+2.domReady
+requirejs(['domReady'],function(){
+    domReady(function(){
+
+    })
+})

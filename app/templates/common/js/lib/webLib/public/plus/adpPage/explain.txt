@@ -1,0 +1,27 @@
+1.次js为rem自适应方案的框架 
+
+2.github库为：https://github.com/finance-sh/adaptive
+
+3.初始化方法：
+
+在页面head写入以下代码，实时更新html的fontsize:
+<script src="js/adaptive.js"></script>  // IOS有缩放，安卓没缩放
+
+<script>
+    // 设计图宽度
+    window['adaptive'].desinWidth = 640;
+    // body 字体大小 会将body字体大小设置为 baseFont / 100 + 'rem'  750的设计图一般设置为28,640的设计图一般设置为24
+    window['adaptive'].baseFont = 24;
+    /*
+    // 显示最大宽度 可选
+    window['adaptive'].maxWidth = 480;
+    // rem值改变后执行方法 可选
+    window['adaptive'].setRemCallback = function () {
+        alert(1)
+    }
+    // scaleType 1:iphone andriod下viewport均无缩放 2:iphone下viewport有缩放,andriod没有 3:iphone andriod下viewport均有缩放; 默认值为1
+    window['adaptive'].scaleType = 1;
+    */
+    // 初始化
+    window['adaptive'].init();
+</script>

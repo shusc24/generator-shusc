@@ -1,0 +1,6 @@
+1.core ºËÐÄ¿â°üÀ¨
+	
+	1.1 jquery 3.1.1
+	2.1 lodash v4.5
+	3.1 Class
+	
