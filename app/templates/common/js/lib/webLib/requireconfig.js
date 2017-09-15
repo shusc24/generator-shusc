@@ -133,7 +133,9 @@ requirejs.config({
 
         scrollbar:"https://cdn.bootcss.com/jquery.perfect-scrollbar/0.8.0/js/perfect-scrollbar.min",
 
-        masonry:"https://cdn.bootcss.com/masonry/4.2.0/masonry.pkgd.min"
+        masonry:"https://cdn.bootcss.com/masonry/4.2.0/masonry.pkgd.min",
+
+        layoutFlow:"lib/webLib/user/shusc/flowlayout/flowlayout"
     },
     shim: {
         layer: ['jquery', 'css!https://cdn.bootcss.com/layer/3.0.1/skin/default/layer.min.css'],
