@@ -1,14 +1,11 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const webpack = require("webpack")
+const webpack = require("webpack");
 module.exports={
-    entry:{app:'./src/js/component/test.js'},
-    // externals: {
-    //     vue: 'Vue'
-    // },
+    entry:{app:'./src/js/component/lib.js'},
     output:{
-        filename:'component.js',
-        path:path.resolve('./dev/other/test/')
+        filename:'vendor.js',
+        path:path.resolve('./dev/other/vendor')
     },
     module: {
         rules: [
@@ -28,7 +25,6 @@ module.exports={
                     }
                 }
             },
-            { test: /iview.src.*?js$/, loader: 'babel-loader' },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
@@ -37,6 +33,7 @@ module.exports={
                     presets: ['es2015']
                 }
             },
+            { test: /iview.src.*?js$/, loader: 'babel-loader'},
             {
                 test:/\.css$/,
                 loader:ExtractTextPlugin.extract({
@@ -50,18 +47,6 @@ module.exports={
     plugins: [
         new ExtractTextPlugin("app.css"),
         new webpack.optimize.ModuleConcatenationPlugin()
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress:{
-        //         warnings:false
-        //     },
-        //     mangle:{
-        //         except:['$super','$','exports','require','requirejs','i']
-        //     }
-        // })
-        // new webpack.ProvidePlugin({
-        //     Vue: 'vue'
-        // }),
-        // new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js')
     ],
     resolve: {
         alias: {
