@@ -59,13 +59,15 @@ module.exports = class extends Generator {
         else if(this.projectAssets === "mobile" || this.projectAssets === "pc"){
             //复制模板
             this.fs.copy(this.templatePath( `${this.projectAssets}`),this.destinationPath(`${this.projectName}`));
-
             // 复制js
             this.fs.copy(this.templatePath('common/js'),this.destinationPath(`${this.projectName}/src/js`));
 
             //复制css
             this.fs.copy(this.templatePath('common/css'),this.destinationPath(`${this.projectName}/src/css`));
-        }else{
+            //复制babel 设置
+            this.fs.copy(this.templatePath(`${this.projectAssets}/_.babelrc`),this.destinationPath(`${this.projectName}/.babelrc`))
+
+        }else if(this.projectAssets === "smobile" || this.projectAssets === "spc"){
             //复制模板
             this.fs.copy(this.templatePath( `${this.projectAssets}`),this.destinationPath(`${this.projectName}`));
             
