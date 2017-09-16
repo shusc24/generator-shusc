@@ -3,7 +3,7 @@
 
 ## 插件 
 
- 1.布局插件
+ ###1.布局插件
   
   #### 1.1   masonry
   介绍:流式布局 [masonry](https://masonry.desandro.com/) -- 用于瀑布流
@@ -32,3 +32,13 @@
     })
    ```   
    
+ ###2.AMD加载器
+ 
+ #### 2.1 ESL
+ 介绍:AMD加载器 [ESL](https://github.com/ecomfe/esl) -- 用于AMD模块加载   
+ 
+ CDN: http://s1.bdstatic.com/r/www/cache/efe/esl/2-1-6/esl.js
+ 
+ 说明: https://github.com/ecomfe/esl/blob/master/doc/config.md
+ 
+ 代码：同requirejs
