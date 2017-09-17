@@ -9,12 +9,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="renderer" content="webkit">
 		<title>简单模板</title>
-		<!--引入css 文件-->
-		<link rel="stylesheet" href="css/style-index.css" />
-
-		<!--引用requirejs 及 config 文件-->
-		<script src="js/lib/webLib/require.min.js"></script>
-		<script src="js/lib/webLib/requireconfig.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/style-index.css?v=1.00" />
+		<script src="./js/lib/webLib/requireconfig.js?v=1.00"></script>
+		<script>
+            requirejs({
+                baseUrl: "js",
+                urlArgs:"v=1.00",
+            })
+		</script>
+		<!--[if lt IE 9]>
+		<style>article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}</style>
+		<script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+		<![endif]-->
 		
 	</head>
 

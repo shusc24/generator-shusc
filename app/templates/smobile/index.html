@@ -9,13 +9,16 @@
 		<meta name="apple-mobile-web-app-capable" content="no" />
 		<meta name="format-detection" content="telephone=no">
 		<title>简单模板</title>
-		<!--引入css 文件-->
-		<link rel="stylesheet" href="css/style-index.css" />
-
+		<link rel="stylesheet" type="text/css" href="./css/style-index.css?v=1.00" />
 		<!--引用requirejs 及 config 文件-->
-		<script src="js/lib/webLib/require.min.js"></script>
-		<script src="js/lib/webLib/requireconfig.js"></script>
-		
+		<script src="./js/lib/webLib/require.min.js"></script>
+		<script src="./js/lib/webLib/requireconfig.js?v=1.00"></script>
+		<script>
+            requirejs({
+                baseUrl: "js",
+                urlArgs:"v=1.00",
+            })
+		</script>
 	</head>
 
 	<body class="page dome-page">

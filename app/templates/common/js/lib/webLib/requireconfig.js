@@ -1,7 +1,5 @@
 var amdDefine = define;
 requirejs.config({
-    baseUrl: "../js",
-    urlargs:"v=1.00",
     paths: {
         //核心库
         jquery: 'https://cdn.bootcss.com/jquery/2.2.4/jquery.min',
