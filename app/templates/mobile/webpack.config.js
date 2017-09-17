@@ -42,6 +42,11 @@ module.exports={
                 })
             },
             { test: /\.(eot|woff|ttf|svg)$/, loader: "file-loader" },
+            {
+                test: /\.jsx$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+            }
         ]
     },
     plugins: [
