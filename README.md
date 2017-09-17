@@ -42,3 +42,25 @@
  说明: https://github.com/ecomfe/esl/blob/master/doc/config.md
  
  代码：同requirejs
+ 
+ 
+  ##3.格式化
+  
+  #### 3.1 Cleave.js
+  介绍:input格式化 [Cleave](http://nosir.github.io/cleave.js/) -- 用于input输入框的格式化 
+  
+  CDN: https://cdn.bootcss.com/cleave.js/1.0.1/cleave.min.js
+  
+  说明: https://github.com/nosir/cleave.js/blob/master/README.md
+  
+  代码：
+  
+```
+    require(['cleave'],function (Cleave) {
+        var cleave = new Cleave("#test",{
+            phone:true,
+            phoneRegionCode: 'CN'
+        })
+    })
+```
+  
