@@ -77,7 +77,6 @@
     "amd-optimize": "^0.6.1",
     "babel-polyfill": "^7.0.0-alpha.19",
     "css-loader": "^0.28.5",
-    "element-ui": "^1.4.2",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "gulp-concat": "^2.6.1",
@@ -85,17 +84,10 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-webpack": "^1.5.0",
-    "iview": "^2.0.0-rc.19",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "postcss-loader": "^2.0.6",
     "style-loader": "^0.18.2",
-    "url-loader": "^0.5.9",
-    "vue": "^2.4.2",
-    "vue-loader": "^13.0.2",
-    "vue-router": "^2.7.0",
-    "vue-template-compiler": "^2.4.2",
-    "vueg": "^1.2.6",
-    "vuex": "^2.3.1"
+    "url-loader": "^0.5.9"
   }
 }
