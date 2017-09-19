@@ -18,7 +18,6 @@ amdDefine('jquery',function () {
     return $
 });
 
-
 amdDefine("lodash",function () {
     return _
 });

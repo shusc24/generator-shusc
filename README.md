@@ -63,4 +63,21 @@
         })
     })
 ```
+
+  ##4.相册图片
+  
+  #### 4.1 SmartPhoto.js
+  介绍:响应式相册 [SmartPhoto](https://appleple.github.io/SmartPhoto/) -- 用于pc移动端的图片相册
+  
+  CDN: https://unpkg.com/smartphoto@0.7.6/js/smartphoto.min.js  https://unpkg.com/smartphoto@0.7.6/css/smartphoto.min.css
+  
+  说明: https://appleple.github.io/SmartPhoto/doc.html
+  
+  代码：
+  
+```
+    require(['smartPhoto'],function (smartPhoto) {
+        new smartPhoto(".js-smartphoto");
+    })
+```
   
