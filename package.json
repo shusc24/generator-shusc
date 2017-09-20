@@ -10,8 +10,7 @@
     "yeoman-generator"
   ],
   "files": [
-    "app",
-    "router"
+    "app"
   ],
   "dependencies": {
     "yeoman-generator": "^1.1.1",
