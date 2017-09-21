@@ -56,3 +56,9 @@ typings/
 
 # dotenv environment variables file
 .env
+
+package-lock.json
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/
+.idea/preferred-vcs.xml
+.idea/workspace.xml
