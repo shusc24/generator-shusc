@@ -18,7 +18,7 @@ module.exports = class extends Generator {
                     {
                         name: '标准pc模板',
                         value: 'pc',
-                        checked: true   // 默认选中
+                        checked: true   // 默认选中1
                     },{
                         name: '标准Mobile模板',
                         value: 'mobile'

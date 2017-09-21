@@ -62,3 +62,4 @@ package-lock.json
 .idea/markdown-navigator/
 .idea/preferred-vcs.xml
 .idea/workspace.xml
+.history
