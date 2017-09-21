@@ -64,7 +64,7 @@
     })
 ```
 
-  ##4.相册图片
+  ##4.相册图片1
   
   #### 4.1 SmartPhoto.js
   介绍:响应式相册 [SmartPhoto](https://appleple.github.io/SmartPhoto/) -- 用于pc移动端的图片相册
