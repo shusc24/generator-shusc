@@ -66,7 +66,6 @@ module.exports = function(gulp, config) {
     // 复制操作
     var copyHandler = function(type, file) {
         file = file || paths['src'][type];
-
         return gulp.src(file, { base: paths.src.dir })
             .pipe(gulp.dest(paths.dev.dir))
             .on('end', reloadHandler);
