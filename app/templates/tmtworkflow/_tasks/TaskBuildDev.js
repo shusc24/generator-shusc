@@ -44,7 +44,8 @@ var paths = {
         html: ['./src/html/**/*.html', '!./src/html/_*/**.html', '!./src/html/_*/**/**.html'],
         svg: ['./src/svg/**/*.svg'],
         htmlAll: './src/html/**/*.html',
-        other: './src/other/**'
+        other: './src/other/**',
+        vue:"./src/js/**/*.vue"
     },
     dev: {
         dir: './dev',
@@ -198,6 +199,7 @@ module.exports = function(gulp, config) {
     }
 
     var watchHandler = function(type, file) {
+
         var target = file.match(/^src[\/|\\](.*?)[\/|\\]/)[1];
 
         switch (target) {
@@ -289,6 +291,11 @@ module.exports = function(gulp, config) {
                 }
 
                 break;
+            case 'vue':
+                setTimeout(function() {
+                    reloadHandler();
+                }, 300)    
+                break;
         }
 
     };
@@ -326,7 +333,8 @@ module.exports = function(gulp, config) {
             paths.src.media,
             paths.src.lessAll,
             paths.src.sassAll,
-            paths.src.htmlAll
+            paths.src.htmlAll,
+            paths.src.vue
         ], { ignored: /[\/\\]\./ });
 
         watcher
@@ -345,6 +353,8 @@ module.exports = function(gulp, config) {
 
         cb();
     }
+
+   
 
     //加载插件
     function loadPlugin(cb) {
