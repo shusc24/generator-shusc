@@ -22,7 +22,7 @@ var rename = require('gulp-rename');
 
 
 var webpackConfigPath = path.join(process.cwd(), 'webpack.config.js');
-var webpackConfig; // webpack 配置
+var webpackConfig; // webpack 配置1
 var jsPath = path.join(process.cwd(), 'src', 'js');
 
 if (util.dirExist(jsPath) && util.fileExist(webpackConfigPath)) {
