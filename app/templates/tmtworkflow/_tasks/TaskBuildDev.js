@@ -76,7 +76,7 @@ module.exports = function(gulp, config) {
         config.livereload && bs.reload();
     };
 
-    //清除目标目录1
+    //清除目标目录12
     function delDev() {
         return del([paths.dev.dir]);
     }
