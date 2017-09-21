@@ -71,7 +71,7 @@ module.exports = function(gulp, config) {
             .on('end', reloadHandler);
     };
 
-    // 自动刷新
+    // 自动刷新1
     var reloadHandler = function() {
         config.livereload && bs.reload();
     };
