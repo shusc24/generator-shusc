@@ -4,7 +4,7 @@ requirejs.config({
         //核心库
         jquery: 'https://cdn.bootcss.com/jquery/2.2.4/jquery.min',
         jqueryOne: 'https://cdn.bootcss.com/jquery/1.12.4/jquery.min',
-        Vue: "https://cdn.bootcss.com/vue/2.4.2/vue.min",
+        Vue: "https://cdn.bootcss.com/vue/2.4.4/vue.min",
         VueOne: 'https://cdn.bootcss.com/vue/1.0.28/vue.min',
         backbone: "https://cdn.bootcss.com/backbone.js/1.3.3/backbone-min",
 
@@ -133,7 +133,13 @@ requirejs.config({
 
         masonry:"https://cdn.bootcss.com/masonry/4.2.0/masonry.pkgd.min",
 
-        layoutFlow:"lib/webLib/user/shusc/flowlayout/flowlayout"
+        layoutFlow:"lib/webLib/user/shusc/flowlayout/flowlayout",
+        //相册插件
+        photoSwiper:'http://lib.baomitu.com/photoswipe/4.1.2/photoswipe.min',
+        //相册
+        photoSwiperUi:"http://lib.baomitu.com/photoswipe/4.1.2/photoswipe-ui-default.min"
+        //封装好的相册组件
+        photoSwiperClass:"lib/webLib/user/shusc/photoSwiper/photoSwiperClass"
     },
     shim: {
         layer: ['jquery', 'css!https://cdn.bootcss.com/layer/3.0.1/skin/default/layer.min.css'],
@@ -153,6 +159,8 @@ requirejs.config({
         swiperScrollbar:['swiper2'],
         smartPhoto:['css!../other/smartPhoto/smartphoto.min.css'],
         marquee:['jquery'],
-        scrollbar:['css!https://cdn.bootcss.com/jquery.perfect-scrollbar/0.8.0/css/perfect-scrollbar.min.css']
+        scrollbar:['css!https://cdn.bootcss.com/jquery.perfect-scrollbar/0.8.0/css/perfect-scrollbar.min.css'],
+        photoSwiper:['css!http://lib.baomitu.com/photoswipe/4.1.2/photoswipe.min.css'],
+        photoSwiperUi:['css!http://lib.baomitu.com/photoswipe/4.1.2/default-skin/default-skin.min.css']
     }
 });
