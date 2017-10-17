@@ -20,7 +20,11 @@ define('browser',()=>{
     return browser
 });
 
-define('util',['jquery','browser'],function($,browser){
+define('getIp',['jquery'],($)=>{
+    return $.get('https://api.ipify.org?format=json')
+});
+
+define('util',['jquery','browser','getIp'],function($,browser,getIp){
     //jquery 扩展动画
     $.fn.extend({
         ani: function (animationName,fn) {
@@ -34,7 +38,8 @@ define('util',['jquery','browser'],function($,browser){
         }
     });
     return{
-        browser
+        browser,
+        getIp
     }
 });
 
