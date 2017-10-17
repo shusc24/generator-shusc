@@ -4,7 +4,7 @@ requirejs.config({
         //核心库
         jquery: 'https://cdn.bootcss.com/jquery/2.2.4/jquery.min',
         jqueryOne: 'https://cdn.bootcss.com/jquery/1.12.4/jquery.min',
-        Vue: "https://cdn.bootcss.com/vue/2.4.4/vue.min",
+        Vue: "https://cdn.bootcss.com/vue/2.5.2/vue.min",
         VueOne: 'https://cdn.bootcss.com/vue/1.0.28/vue.min',
         backbone: "https://cdn.bootcss.com/backbone.js/1.3.3/backbone-min",
 
@@ -14,18 +14,18 @@ requirejs.config({
         lodashCore: 'https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min',
 
         // Vue插件
-        Vuex: "https://cdn.bootcss.com/vuex/2.4.1/vuex.min",
+        Vuex: "https://cdn.bootcss.com/vuex/3.0.0/vuex.min",
         Vresource: ["https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min"],
-        Vrouter: ["https://cdn.bootcss.com/vue-router/2.7.0/vue-router.min"],
+        Vrouter: ["https://lib.baomitu.com/vue-router/3.0.1/vue-router.min"],
 
         core: "lib/webLib/public/core/core",
         h5core: "lib/webLib/public/core/H5core",
         Class: "lib/webLib/public/core/libs/Base/Base",
         //插件库
-        swiper: "https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min",
+        swiper: "http://lib.baomitu.com/Swiper/4.0.1/js/swiper.min",
         swiper2: "https://cdn.staticfile.org/Swiper/2.7.6/idangerous.swiper", //兼容ie6 ie7
-        echarts: "https://cdn.bootcss.com/echarts/3.7.1/echarts.min",
-        sweetalert: 'https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min',
+        echarts: "https://cdn.bootcss.com/echarts/3.7.2/echarts.min",
+        sweetalert: 'https://lib.baomitu.com/limonte-sweetalert2/6.10.3/sweetalert2.min',
         wx: 'http://res.wx.qq.com/open/js/jweixin-1.1.0',
         popper: 'https://cdn.bootcss.com/popper.js/1.0.8/popper.min',
         cropper: "https://cdn.bootcss.com/cropper/3.0.0-alpha.1/cropper.min",//图片裁剪插件
@@ -138,7 +138,7 @@ requirejs.config({
         //相册插件
         photoSwiper:'http://lib.baomitu.com/photoswipe/4.1.2/photoswipe.min',
         //相册
-        photoSwiperUi:"http://lib.baomitu.com/photoswipe/4.1.2/photoswipe-ui-default.min"
+        photoSwiperUi:"http://lib.baomitu.com/photoswipe/4.1.2/photoswipe-ui-default.min",
         //封装好的相册组件
         photoSwiperClass:"lib/webLib/user/shusc/photoSwiper/photoSwiperClass"
     },
@@ -148,7 +148,8 @@ requirejs.config({
         AlloyFinger: {
             exports: 'AlloyFinger'
         },
-        sweetalert: ['css!https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css'],
+        swiper:['css!http://lib.baomitu.com/Swiper/4.0.1/css/swiper.min.css'],
+        sweetalert: ['css!https://lib.baomitu.com/limonte-sweetalert2/6.10.3/sweetalert2.min.css'],
         swiper2: ['css!https://cdn.staticfile.org/Swiper/2.7.6/idangerous.swiper.min.css'],
         cropper: ['jquery', 'css!https://cdn.bootcss.com/cropper/3.0.0-alpha.1/cropper.min.css'],
         director: {
