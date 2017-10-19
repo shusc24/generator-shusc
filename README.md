@@ -80,4 +80,25 @@
         new smartPhoto(".js-smartphoto");
     })
 ```
+
+  #### 4.2 PhotoSwipe
+ 
+  介绍:响应式相册 [PhotoSwipe](http://photoswipe.com/) -- 用于pc移动端的图片相册
+    
+  CDN: http://lib.baomitu.com/photoswipe/4.1.2/photoswipe.min.js <br/>
+       http://lib.baomitu.com/photoswipe/4.1.2/photoswipe-ui-default.js <br/>
+       http://lib.baomitu.com/photoswipe/4.1.2/default-skin/default-skin.min.css <br/>
+       http://lib.baomitu.com/photoswipe/4.1.2/photoswipe.min.css
+       
+  说明: http://photoswipe.com/documentation/getting-started.html  需要二次封装 封装好的类在 photoSwiperClass
   
+```
+   require(['photoSwiperClass'], function (photoSwiperClass) {
+       // 传入参数items 和 options 具体看文档
+      var photos =  photoSwiperClass([{src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
+          w: 964,
+          h: 1024
+      }]);
+      photos.init();
+   })
+```

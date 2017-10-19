@@ -63,3 +63,5 @@ package-lock.json
 .idea/preferred-vcs.xml
 .idea/workspace.xml
 .history
+.project
+package-lock.json
