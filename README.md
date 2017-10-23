@@ -102,3 +102,22 @@
       photos.init();
    })
 ```
+
+  ##5.弹出层
+  
+  #### 5.1 layer
+  介绍:弹出层插件 [Layer](https://github.com/sentsin/layer/) -- 用于弹出层
+  
+  CDN: https://cdn.bootcss.com/layer/3.0.3/layer.min.js <br>
+       https://cdn.bootcss.com/layer/3.0.3/skin/default/layer.min.css 
+        
+  
+  说明: http://layer.layui.com/
+  
+  代码：
+  
+```
+    require(['layer'],function (layer) {
+        layer.msg('的确很重要', {icon: 1});
+    })
+```
