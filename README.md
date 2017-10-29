@@ -130,7 +130,9 @@ CDN:暂无
 
  说明:https://github.com/szimek/signature_pad
  
- 代码:
+ 在线实例:https://jsfiddle.net/szimek/d6a78gwq/
+ 
+ 代码: 
  
  ```
  require(['signature_pad']，function(signaturePad){
