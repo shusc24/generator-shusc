@@ -140,7 +140,10 @@ requirejs.config({
         //相册
         photoSwiperUi:"http://lib.baomitu.com/photoswipe/4.1.2/photoswipe-ui-default.min",
         //封装好的相册组件
-        photoSwiperClass:"lib/webLib/user/shusc/photoSwiper/photoSwiperClass"
+        photoSwiperClass:"lib/webLib/user/shusc/photoSwiper/photoSwiperClass",
+
+        //canvas 绘图插件 目前版本 2.3.2
+        signature_pad:"lib/webLib/public/plus/signature_pad/signature_pad"
     },
     shim: {
         layer: ['jquery', 'css!https://cdn.bootcss.com/layer/3.0.3/skin/default/layer.min.css'],
