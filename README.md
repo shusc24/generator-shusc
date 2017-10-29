@@ -1,8 +1,13 @@
 # generator-shusc
+## 介绍
+自用的yeoman的generator 用于快速初始化 项目
 
-
+目前模板有: tmt-workflow,简单pc,h5模板,标准pc,h5模板.
+## 安装
+1.下载本地 使用cmd(管理员模式) 根目录 运行npm link
+2.全局安装 yeoman cnpm i yo -g
+3.命令行 yo shusc 选择模板 安装依赖
 ## 插件 
-
  ##1.布局插件
   
   #### 1.1   masonry
