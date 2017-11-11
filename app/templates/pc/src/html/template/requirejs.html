@@ -1,13 +1,16 @@
-<link rel="stylesheet" type="text/css" href="../css/style-index.css?v=1.00" />
-<script src="../js/lib/webLib/requireconfig.js?v=1.00"></script>
-<script src="../other/vendor/vendor.js?v=1.00"></script>
+<%
+var version = '1.00';
+%>
+<link rel="stylesheet" type="text/css" href="../css/style-index.css?v=<%= version%>" />
+<script src="../js/lib/webLib/requireconfig.js?v=<%= version%>"></script>
+<script src="../other/vendor/vendor.js?v=<%= version%>"></script>
 <script>
     requirejs({
         baseUrl: "../js",
-        urlArgs:"v=1.00",
+        urlArgs:"v=<%= version%>",
     })
 </script>
-<link rel="stylesheet" href="../other/vendor/app.css?v=1.00">
+<link rel="stylesheet" href="../other/vendor/app.css?v=<%= version%>">
 <!--[if lt IE 9]>
 <style>article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}</style>
 <script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
