@@ -65,7 +65,10 @@ module.exports = class extends Generator {
             //复制css
             this.fs.copy(this.templatePath('common/css'),this.destinationPath(`${this.projectName}/src/css`));
             //复制babel 设置
-            this.fs.copy(this.templatePath(`${this.projectAssets}/_.babelrc`),this.destinationPath(`${this.projectName}/.babelrc`))
+            this.fs.copy(this.templatePath(`${this.projectAssets}/_.babelrc`),this.destinationPath(`${this.projectName}/.babelrc`));
+
+           //复制.gitignore
+            this.fs.copy(this.templatePath(`${this.projectAssets}/_.gitignore`),this.destinationPath(`${this.projectName}/.gitignore`));
 
         }else if(this.projectAssets === "smobile" || this.projectAssets === "spc"){
             //复制模板
