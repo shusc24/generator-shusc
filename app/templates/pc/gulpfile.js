@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path');
 
 //注册
-var deep = 3;
+var deep = 2;
 run_tasks('_tasks');
 
 function run_tasks(tasks_path) {
