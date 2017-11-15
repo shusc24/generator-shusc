@@ -175,3 +175,32 @@ CDN:暂无
  
  })
  ```
+ 
+ ##6. canvas 截屏插件
+ 
+ 介绍: canvas 截屏插件 [html2canvas](https://github.com/niklasvh/html2canvas) -- 可用于部分区域截图
+ 
+  CDN:https://lib.baomitu.com/html2canvas/0.5.0-beta4/html2canvas.min
+ 
+  说明:https://github.com/niklasvh/html2canvas
+  
+  代码: 
+  
+  ```
+  require(['jquery','html2canvas'],function($,html2canvas){
+      function convertCanvasToImage(canvas) {
+          //新Image对象，可以理解为DOM
+          var image = new Image();
+          // canvas.toDataURL 返回的是一串Base64编码的URL
+          // 指定格式 PNG
+          image.src = canvas.toDataURL("image/png");
+          return image;
+      }
+
+      html2canvas(document.body,{
+        onrendered:function (canvas) {
+            $("body").append(convertCanvasToImage(canvas));
+          }
+    })
+})
+  ```

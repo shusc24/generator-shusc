@@ -4,7 +4,7 @@ requirejs.config({
         //核心库
         jquery: 'https://cdn.bootcss.com/jquery/2.2.4/jquery.min',
         jqueryOne: 'https://cdn.bootcss.com/jquery/1.12.4/jquery.min',
-        Vue: "https://cdn.bootcss.com/vue/2.5.2/vue.min",
+        Vue: "https://cdn.bootcss.com/vue/2.5.3/vue.min",
         VueOne: 'https://cdn.bootcss.com/vue/1.0.28/vue.min',
         backbone: "https://cdn.bootcss.com/backbone.js/1.3.3/backbone-min",
 
@@ -14,7 +14,7 @@ requirejs.config({
         lodashCore: 'https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min',
 
         // Vue插件
-        Vuex: "https://cdn.bootcss.com/vuex/3.0.0/vuex.min",
+        Vuex: "https://lib.baomitu.com/vuex/3.0.1/vuex.min",
         Vresource: ["https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min"],
         Vrouter: ["https://lib.baomitu.com/vue-router/3.0.1/vue-router.min"],
 
@@ -117,7 +117,7 @@ requirejs.config({
 
         swiperScrollbar:'../other/swiperScrollbar/swiperScrollbar',
 
-        axios:'https://cdn.bootcss.com/axios/0.16.2/axios.min',
+        axios:'http://lib.baomitu.com/axios/0.17.1/axios.min',
 
         artTemplate:'lib/webLib/public/plus/artTemplate/artTemplate',
 
@@ -143,7 +143,10 @@ requirejs.config({
         photoSwiperClass:"lib/webLib/user/shusc/photoSwiper/photoSwiperClass",
 
         //canvas 绘图插件 目前版本 2.3.2
-        signature_pad:"lib/webLib/public/plus/signature_pad/signature_pad"
+        signature_pad:"lib/webLib/public/plus/signature_pad/signature_pad",
+
+        //canvas 截屏 插件
+        html2canvas:"https://lib.baomitu.com/html2canvas/0.5.0-beta4/html2canvas.min"
     },
     shim: {
         layer: ['jquery', 'css!https://cdn.bootcss.com/layer/3.0.3/skin/default/layer.min.css'],
