@@ -463,7 +463,7 @@ module.exports = function(gulp, config) {
         gulp.parallel(
             copyOther,
             compileLess,
-            compileSass,
+            // compileSass,
             imageminImg,
             copyMedia,
             compileJs,

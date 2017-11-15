@@ -331,7 +331,7 @@ module.exports = function(gulp, config) {
             paths.src.js,
             paths.src.media,
             paths.src.lessAll,
-            paths.src.sassAll,
+            // paths.src.sassAll,
             paths.src.htmlAll,
             paths.src.vue
         ], { ignored: /[\/\\]\./ });
@@ -373,7 +373,7 @@ module.exports = function(gulp, config) {
             // copyJs,
             copyMedia,
             compileLess,
-            compileSass
+            // compileSass
         ),
         compileHtml,
         svgSymbols,
