@@ -14,12 +14,12 @@
     "gulp": "git://github.com/gulpjs/gulp#4.0",
     "gulp-babel": "^6.1.2",
     "gulp-cssnano": "^2.1.2",
-    "gulp-ejs": "^3.0.1",
+    "gulp-ejs": "^3.1.0",
     "gulp-ftp": "^1.1.0",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-lazyimagecss": "^2.0.8",
-    "gulp-less": "^3.3.2",
+    "gulp-less": "3.3.2",
     "gulp-postcss": "^6.0.1",
     "gulp-posthtml": "^1.5.2",
     "gulp-rename": "^1.2.2",
@@ -47,8 +47,8 @@
     "through2": "^2.0.3",
     "tmt-ejs-helper": "^0.0.1",
     "vinyl": "^2.0.1",
-    "webpack": "^3.5.5",
-    "webpack-stream": "^3.2.0"
+    "webpack": "^3.8.1",
+    "webpack-stream": "^4.0.0"
   },
   "description": "A f2e project workflow based on Gulp",
   "repository": {
