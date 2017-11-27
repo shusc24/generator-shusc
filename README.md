@@ -204,3 +204,23 @@ CDN:暂无
     })
 })
   ```
+
+  7.页面加载loading效果 nprogress
+
+  介绍:仿youtube的页面加载效果的loadingbar   nprogress
+
+  CDN:https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js
+      https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css
+  代码
+   ```
+     require(['nprogress','jquery'],function (NProgress,$) {
+        NProgress.start();
+        $(function () {
+            NProgress.done();
+            $("body").on("click","a",function () {
+                NProgress.start();
+                NProgress.set(0.4);
+            })
+        })
+    })
+   ```
