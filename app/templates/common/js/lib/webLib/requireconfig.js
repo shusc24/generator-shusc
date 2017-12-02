@@ -146,7 +146,11 @@ requirejs.config({
         signature_pad:"lib/webLib/public/plus/signature_pad/signature_pad",
 
         //canvas 截屏 插件
-        html2canvas:"https://lib.baomitu.com/html2canvas/0.5.0-beta4/html2canvas.min"
+        html2canvas:"https://lib.baomitu.com/html2canvas/0.5.0-beta4/html2canvas.min",
+
+        //页面加载插件loading
+        nprogress:"https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min"
+
     },
     shim: {
         layer: ['jquery', 'css!https://cdn.bootcss.com/layer/3.0.3/skin/default/layer.min.css'],
@@ -170,6 +174,7 @@ requirejs.config({
         scrollbar:['css!https://cdn.bootcss.com/jquery.perfect-scrollbar/0.8.1/css/perfect-scrollbar.min.css'],
         photoSwiper:['css!http://lib.baomitu.com/photoswipe/4.1.2/photoswipe.min.css'],
         photoSwiperUi:['css!http://lib.baomitu.com/photoswipe/4.1.2/default-skin/default-skin.min.css'],
-        wangEditor:['css!https://cdn.bootcss.com/wangEditor/3.0.10/wangEditor.min.css']
+        wangEditor:['css!https://cdn.bootcss.com/wangEditor/3.0.10/wangEditor.min.css'],
+        nprogress:['css!https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css']
     }
 });
