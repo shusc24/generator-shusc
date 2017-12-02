@@ -12,7 +12,7 @@ var lazyImageCSS = require('gulp-lazyimagecss'); // 自动为图片样式添加 
 var minifyCSS = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
-var tmtsprite = require('gulp-tmtsprite'); // 雪碧图合并
+// var tmtsprite = require('gulp-tmtsprite'); // 雪碧图合并
 var ejshelper = require('tmt-ejs-helper');
 var postcss = require('gulp-postcss'); // CSS 预处理
 var postcssPxtorem = require('postcss-pxtorem'); // 转换 px 为 rem
@@ -21,7 +21,7 @@ var posthtml = require('gulp-posthtml');
 var posthtmlPx2rem = require('posthtml-px2rem');
 var RevAll = require('gulp-rev-all'); // reversion
 var revDel = require('gulp-rev-delete-original');
-var sass = require('gulp-sass');
+// var sass = require('gulp-sass');
 var changed = require('./common/changed')();
 var webpack = require('webpack-stream');
 var babel = require('gulp-babel');
@@ -76,7 +76,7 @@ var paths = {
         dir: './dist',
         css: './dist/css',
         img: './dist/img',
-        img: './dist/svg',
+        svg: './dist/svg',
         html: './dist/html',
         sprite: './dist/sprite',
         other:'./dist/other'
@@ -138,7 +138,7 @@ module.exports = function(gulp, config) {
         return gulp.src(paths.src.less)
             .pipe(less({ relativeUrls: true }))
             .pipe(lazyImageCSS({ SVGGracefulDegradation: config.SVGGracefulDegradation, imagePath: lazyDir }))
-            .pipe(tmtsprite({ margin: 4 }))
+            // .pipe(tmtsprite({ margin: 4 }))
             .pipe(gulpif('*.png', gulp.dest(paths.tmp.sprite), gulp.dest(paths.tmp.css)));
     }
 
@@ -148,7 +148,7 @@ module.exports = function(gulp, config) {
             .pipe(sass())
             .on('error', sass.logError)
             .pipe(lazyImageCSS({ SVGGracefulDegradation: config.SVGGracefulDegradation, imagePath: lazyDir }))
-            .pipe(tmtsprite({ margin: 4 }))
+            // .pipe(tmtsprite({ margin: 4 }))
             .pipe(gulpif('*.png', gulp.dest(paths.tmp.sprite), gulp.dest(paths.tmp.css)));
     }
 
@@ -223,11 +223,12 @@ module.exports = function(gulp, config) {
                     ]
                 })
             )
-            .pipe(uglify({
-                mangle: {
-                    except: ['require', 'exports', 'module', '$', '_']
-                }
-            }))
+            // 暂时不压缩
+            // .pipe(uglify({
+            //     mangle: {
+            //         except: ['require', 'exports', 'module', '$', '_']
+            //     }
+            // }))
             .pipe(gulp.dest(paths.tmp.js));
     }
 
