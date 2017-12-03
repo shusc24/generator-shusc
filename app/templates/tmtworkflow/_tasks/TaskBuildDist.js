@@ -254,7 +254,7 @@ module.exports = function(gulp, config) {
                         minPixelValue: 2
                     })
                 )))
-            .pipe(parseSVG({ devPath: 'tmp', SVGGracefulDegradation: config.SVGGracefulDegradation }))
+            // .pipe(parseSVG({ devPath: 'tmp', SVGGracefulDegradation: config.SVGGracefulDegradation }))
             .pipe(gulp.dest(paths.tmp.html))
             .pipe(usemin())
             .pipe(gulp.dest(paths.tmp.html));

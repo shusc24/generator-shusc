@@ -134,7 +134,7 @@ module.exports = function(gulp, config) {
             .pipe(ejs(ejshelper()).on('error', function(error) {
                 console.log(error.message);
             }))
-            .pipe(parseSVG({ devPath: 'dev' }))
+            // .pipe(parseSVG({ devPath: 'dev' }))
             .pipe(gulp.dest(paths.dev.html))
             .on('data', function() {})
             .on('end', reloadHandler)
