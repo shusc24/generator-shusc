@@ -4,10 +4,11 @@
 
 目前模板有: tmt-workflow,简单pc,h5模板,标准pc,h5模板.
 ### 安装
-1.下载本地 使用cmd(管理员模式) 根目录 运行npm link
+1.cnpm generator-shusc -g
 2.全局安装 yeoman cnpm i yo -g
-3.命令行 yo shusc 选择模板 安装依赖
-### 插件 
+3.命令行 yo shusc 选择模板 安装依赖 (标准模版依赖tmt-workflow 工作流)
+4.标准模版使用 AMD + webpack 加载方式 使用npm run dev 进行dev 操作
+### require.config文件中的插件
  ###1.布局插件
   
   #### 1.1   masonry
