@@ -1,7 +1,8 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require("webpack");
-module.exports={
+const vuxLoader = require("vux-loader");
+module.exports=vuxLoader.merge({
     entry:{app:'./src/js/component/lib.js'},
     output:{
         filename:'vendor.js',
@@ -30,7 +31,7 @@ module.exports={
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 query: {
-                    presets: ['es2015']
+                    presets: ['es2015',"stage-2"]
                 }
             },
             { test: /iview.src.*?js$/, loader: 'babel-loader'},
@@ -56,8 +57,10 @@ module.exports={
     resolve: {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
-            "component":path.resolve(__dirname,"public/js/component")
+            "$component": __dirname + "/src/js/component"
         }
     }
-};
+},{
+    plugins:['vux-ui']
+});
 

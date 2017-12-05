@@ -38,7 +38,7 @@
 	//gulp-lazyImageCSS 寻找目录(https://github.com/weixin/gulp-lazyimagecss)
 
 	"supportWebp": false,
-	"supportREM": true,
+	"supportREM": false,
 	"supportChanged": false,
 	"reversion": false
 }
