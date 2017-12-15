@@ -211,7 +211,7 @@ CDN:暂无
 })
   ```
 
-  7.页面加载loading效果 nprogress
+  ###7.页面加载loading效果 nprogress
 
   介绍:仿youtube的页面加载效果的loadingbar   nprogress
 
@@ -230,3 +230,19 @@ CDN:暂无
         })
     })
    ```
+   
+   ###8.批量下载
+   
+   介绍:浏览器使用的批量下载 multi-download
+   
+   CDN:暂无 
+   
+   安装方式：使用lib webpack 打包
+   
+   ```
+        require(['multiDownload'],function (multiDownload) {
+            multiDownload(['URL地址','URL地址','URL地址'])
+        })
+   ```
+      
+    
