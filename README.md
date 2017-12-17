@@ -14,7 +14,7 @@
 tmt-workflow 不是完全版 改了 去除了 scss 编译和 雪碧图合并 兼容了 node 8* 等 tmt-workflow 兼容node 8 再改回
 
 ### require.config文件中的插件
- ###1.布局插件
+ ### 1.布局插件
   
   #### 1.1   masonry
   介绍:流式布局 [masonry](https://masonry.desandro.com/) -- 用于瀑布流
@@ -43,7 +43,7 @@ tmt-workflow 不是完全版 改了 去除了 scss 编译和 雪碧图合并 兼
     })
    ```   
    
- ###2.AMD加载器
+ ### 2.AMD加载器
  
  #### 2.1 ESL
  介绍:AMD加载器 [ESL](https://github.com/ecomfe/esl) -- 用于AMD模块加载   
@@ -55,7 +55,7 @@ tmt-workflow 不是完全版 改了 去除了 scss 编译和 雪碧图合并 兼
  代码：同requirejs
  
  
-  ###3.格式化
+  ### 3.格式化
   
   #### 3.1 Cleave.js
   介绍:input格式化 [Cleave](http://nosir.github.io/cleave.js/) -- 用于input输入框的格式化 
@@ -133,7 +133,7 @@ tmt-workflow 不是完全版 改了 去除了 scss 编译和 雪碧图合并 兼
     })
 ```
 
-###6. canvas 绘图插件
+### 6. canvas 绘图插件
 
 介绍: canvas 类似画板插件 [Signature Pad](https://github.com/szimek/signature_pad) -- 可用于签名
 
@@ -182,7 +182,7 @@ CDN:暂无
  })
  ```
  
- ###6. canvas 截屏插件
+ ### 6. canvas 截屏插件
  
  介绍: canvas 截屏插件 [html2canvas](https://github.com/niklasvh/html2canvas) -- 可用于部分区域截图
  
@@ -211,7 +211,7 @@ CDN:暂无
 })
   ```
 
-  ###7.页面加载loading效果 nprogress
+  ### 7.页面加载loading效果 nprogress
 
   介绍:仿youtube的页面加载效果的loadingbar   nprogress
 
@@ -231,7 +231,7 @@ CDN:暂无
     })
    ```
    
-   ###8.批量下载
+   ### 8.批量下载
    
    介绍:浏览器使用的批量下载 multi-download
    
@@ -244,5 +244,43 @@ CDN:暂无
             multiDownload(['URL地址','URL地址','URL地址'])
         })
    ```
+   
+   ### 9.requrieP
+   
+   ## 作用
+      该插件是讲requirejs中的require转换成类似promise语法
+      (使用在webpack打包下进行异步加载  )
+   
+   ## 使用
+   ````
+       //通用
+       requireP(['jquery:$','Vue']).then(function(lib){
+           var $ = lib.$;
+           var Vue = lib.Vue;
+       })
+   
+      //AMD
+      require(['requireP'],function(requireP){
+            let testComponet = async function (resolve) {
+                resolve(await requireP('test'));
+            };
+      })  
+      
+      //commonJs
+      const requireP = require('requireP');
+      
+      async function test (){
+           let Vue = await requireP('Vue') 
+      }
+      
+      test()
+      
+      //使用数组别名
+      async function test2(){
+           let {Vue,$} = await requireP(['Vue','jquery:$'])
+      }
+      
+      test2()
+   ````
       
     
