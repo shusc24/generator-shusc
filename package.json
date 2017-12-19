@@ -1,6 +1,6 @@
 {
   "name": "generator-shusc",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,7 @@
     "app"
   ],
   "dependencies": {
-    "yeoman-generator": "^1.1.1",
-    "del": "3.0.0"
+    "yeoman-generator": "^1.1.1"
   },
   "author": "",
   "license": "MIT"

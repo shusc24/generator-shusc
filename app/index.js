@@ -2,7 +2,6 @@ var Generator = require('yeoman-generator'),
     log = console.log,
     fs = require('fs'),
     path = require('path'),
-    del = require('del'),
     generatorName = 'gulp';  
 module.exports = class extends Generator {
     constructor(args, opts){
