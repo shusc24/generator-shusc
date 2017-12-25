@@ -4,7 +4,7 @@ requirejs.config({
         //核心库
         jquery: 'https://cdn.bootcss.com/jquery/2.2.4/jquery.min',
         jqueryOne: 'https://cdn.bootcss.com/jquery/1.12.4/jquery.min',
-        Vue: "https://cdn.bootcss.com/vue/2.5.9/vue.min",
+        Vue: "https://cdn.bootcss.com/vue/2.5.13/vue.min",
         VueOne: 'https://cdn.bootcss.com/vue/1.0.28/vue.min',
         backbone: "https://cdn.bootcss.com/backbone.js/1.3.3/backbone-min",
 
@@ -29,7 +29,7 @@ requirejs.config({
         wx: 'http://res.wx.qq.com/open/js/jweixin-1.1.0',
         popper: 'https://cdn.bootcss.com/popper.js/1.0.8/popper.min',
         cropper: "https://cdn.bootcss.com/cropper/3.0.0-alpha.1/cropper.min",//图片裁剪插件
-        layer: "https://cdn.bootcss.com/layer/3.1.0/layer.min",
+        layer: "https://cdn.bootcss.com/layer/3.1.0/layer",
         socketIo: 'https://cdn.bootcss.com/socket.io/2.0.4/socket.io.slim',
         dynamics: 'https://cdn.staticfile.org/dynamics.js/1.1.5/dynamics.min',//物理库
 
@@ -153,7 +153,7 @@ requirejs.config({
 
     },
     shim: {
-        layer: ['jquery', 'css!https://cdn.bootcss.com/layer/3.1.0/skin/default/layer.min.css'],
+        layer: ['jquery', 'css!https://cdn.bootcss.com/layer/3.1.0/theme/default/layer.css'],
         zui: ['jquery'],
         AlloyFinger: {
             exports: 'AlloyFinger'
