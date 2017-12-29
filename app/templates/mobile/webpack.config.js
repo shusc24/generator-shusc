@@ -12,27 +12,12 @@ module.exports=vuxLoader.merge({
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        css: ExtractTextPlugin.extract({
-                            use: 'css-loader!postcss-loader',
-                            fallback: 'vue-style-loader' // <- 这是vue-loader的依赖，所以如果使用npm3，则不需要显式安装
-                        }),
-                        less:ExtractTextPlugin.extract({
-                            use: 'css-loader!postcss-loader!less-loader',
-                            fallback: 'vue-style-loader' // <- 这是vue-loader的依赖，所以如果使用npm3，则不需要显式安装
-                        })
-                    }
-                }
+                loader: 'vue-loader'
             },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    presets: ['es2015',"stage-2"]
-                }
+                exclude: /node_modules/
             },
             { test: /iview.src.*?js$/, loader: 'babel-loader'},
             {
