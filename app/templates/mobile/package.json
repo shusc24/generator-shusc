@@ -50,8 +50,6 @@
     "vue-template-compiler": "^2.5.13",
     "vueg": "1.2.9",
     "vuex": "^3.0.1",
-    "vux": "^2.7.6",
-    "vux-loader": "^1.1.30",
     "webpack": "3.10.0",
     "multi-download":"^2.0.1"
   }

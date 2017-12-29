@@ -11,7 +11,19 @@ module.exports={
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: {
+                    loaders: {
+                        css: ExtractTextPlugin.extract({
+                            use: 'css-loader!postcss-loader',
+                            fallback: 'vue-style-loader' // <- 这是vue-loader的依赖，所以如果使用npm3，则不需要显式安装
+                        }),
+                        less:ExtractTextPlugin.extract({
+                            use: 'css-loader!postcss-loader!less-loader',
+                            fallback: 'vue-style-loader' // <- 这是vue-loader的依赖，所以如果使用npm3，则不需要显式安装
+                        })
+                    }
+                }
             },
             {
                 test: /\.js$/,

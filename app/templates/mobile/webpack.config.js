@@ -1,8 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require("webpack");
-const vuxLoader = require("vux-loader");
-module.exports=vuxLoader.merge({
+module.exports={
     entry:{app:'./src/js/component/lib.js'},
     output:{
         filename:'vendor.js',
@@ -12,7 +11,19 @@ module.exports=vuxLoader.merge({
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: {
+                    loaders: {
+                        css: ExtractTextPlugin.extract({
+                            use: 'css-loader!postcss-loader',
+                            fallback: 'vue-style-loader' // <- 这是vue-loader的依赖，所以如果使用npm3，则不需要显式安装
+                        }),
+                        less:ExtractTextPlugin.extract({
+                            use: 'css-loader!postcss-loader!less-loader',
+                            fallback: 'vue-style-loader' // <- 这是vue-loader的依赖，所以如果使用npm3，则不需要显式安装
+                        })
+                    }
+                }
             },
             {
                 test: /\.js$/,
@@ -45,7 +56,5 @@ module.exports=vuxLoader.merge({
             "$component": __dirname + "/src/js/component"
         }
     }
-},{
-    plugins:['vux-ui']
-});
+};
 
