@@ -1,8 +1,5 @@
 (function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        define("requireP", [], factory);
-    }
-    else if (typeof exports === 'object') {
+    if (typeof exports === 'object') {
         module.exports = factory();
     }
     else {
