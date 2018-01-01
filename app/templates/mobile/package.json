@@ -12,14 +12,11 @@
   "license": "ISC",
   "devDependencies": {
     "adaptive.js": "^0.0.2",
-    "element-ui": "^2.0.7",
     "jquery": "^3.2.1",
-    "mint-ui": "^2.2.12",
     "style-loader": "^0.18.2",
     "swiper": "^4.0.7",
     "velocity-animate": "^1.5.0",
     "velocity-ui-pack": "^1.2.2",
-    "iview": "^2.7.2",
     "smartphoto": "0.7.7",
     "dplayer": "1.9.1",
     "anime": "^0.1.2",
@@ -51,6 +48,7 @@
     "vueg": "1.2.9",
     "vuex": "^3.0.1",
     "webpack": "3.10.0",
-    "multi-download":"^2.0.1"
+    "multi-download":"^2.0.1",
+    "vue-ydui":"^1.1.8"
   }
 }
