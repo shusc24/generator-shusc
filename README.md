@@ -8,6 +8,7 @@
 1.简单模版 不依赖 构建工具 直接使用 less 编译请使用 
 2.标准模版 需要在tmt-workflow 工作流中使用 需要运行两个 构建服务 gulp 和 webpack <br/>
     gulp - build_dev   webpack - npm run dev
+3.js 依赖加载基本使用requirejs 在requireconfig中配置     
 
 ### 安装
 1.cnpm generator-shusc -g <br/>
