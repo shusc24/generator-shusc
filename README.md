@@ -2,12 +2,18 @@
 ### 介绍
 自用的yeoman的generator 用于快速初始化 项目
 
-目前模板有: tmt-workflow,简单pc,h5模板,标准pc,h5模板.
+目前模板有: tmt-workflow,简单pc,简单h5模板,标准pc,h5模板.
+
+## 模版说明
+1.简单模版 不依赖 构建工具 直接使用 less 编译请使用 
+2.标准模版 需要在tmt-workflow 工作流中使用 需要运行两个 构建服务 gulp 和 webpack <br/>
+    gulp - build_dev   webpack - npm run dev
+
 ### 安装
-1.cnpm generator-shusc -g
-2.全局安装 yeoman cnpm i yo -g
-3.命令行 yo shusc 选择模板 安装依赖 (标准模版依赖tmt-workflow 工作流)
-4.标准模版使用 AMD + webpack 加载方式 使用npm run dev 进行dev 操作
+1.cnpm generator-shusc -g <br/>
+2.全局安装 yeoman cnpm i yo -g <br/>
+3.命令行 yo shusc 选择模板 安装依赖 (标准模版依赖tmt-workflow 工作流) <br/>
+4.标准模版使用 AMD + webpack 加载方式 使用npm run dev 进行dev 操作 <br/>
 
 ### 注意
 
@@ -283,4 +289,3 @@ CDN:暂无
       test2()
    ````
       
-    
