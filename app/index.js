@@ -84,6 +84,6 @@ module.exports = class extends Generator {
     }
 
     end() {
-        console.log("运行cnpm install 安装");
+        console.log("运行cnpm i 安装");
     }
 };

@@ -5,22 +5,14 @@ requirejs.config({
         jquery: 'https://cdn.bootcss.com/jquery/2.2.4/jquery.min',
         jqueryOne: 'https://cdn.bootcss.com/jquery/1.12.4/jquery.min',
         Vue: "https://cdn.bootcss.com/vue/2.5.13/vue.min",
-        VueOne: 'https://cdn.bootcss.com/vue/1.0.28/vue.min',
         backbone: "https://cdn.bootcss.com/backbone.js/1.3.3/backbone-min",
-
         //underscore 及 lodash
         underscore: "https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min",
-        lodash: "https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min",
-        lodashCore: 'https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min',
-
+        lodash: "https://cdn.bootcss.com/lodash.js/4.17.5/lodash.min",
         // Vue插件
         Vuex: "https://lib.baomitu.com/vuex/3.0.1/vuex.min",
         Vresource: ["https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min"],
         Vrouter: ["https://lib.baomitu.com/vue-router/3.0.1/vue-router.min"],
-
-        core: "lib/webLib/public/core/core",
-        h5core: "lib/webLib/public/core/H5core",
-        Class: "lib/webLib/public/core/libs/Base/Base",
         //插件库
         swiper: "http://lib.baomitu.com/Swiper/4.0.7/js/swiper.min",
         swiper2: "https://cdn.staticfile.org/Swiper/2.7.6/idangerous.swiper", //兼容ie6 ie7
