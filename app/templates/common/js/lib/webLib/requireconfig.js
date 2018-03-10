@@ -2,7 +2,7 @@ var amdDefine = define;
 requirejs.config({
     paths: {
         //核心库
-        jquery: 'https://cdn.bootcss.com/jquery/2.2.4/jquery.min',
+        jquery: 'https://cdn.bootcss.com/jquery/3.3.1/jquery.min',
         jqueryOne: 'https://cdn.bootcss.com/jquery/1.12.4/jquery.min',
         Vue: "https://cdn.bootcss.com/vue/2.5.13/vue.min",
         backbone: "https://cdn.bootcss.com/backbone.js/1.3.3/backbone-min",
@@ -14,13 +14,13 @@ requirejs.config({
         Vresource: ["https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min"],
         Vrouter: ["https://lib.baomitu.com/vue-router/3.0.1/vue-router.min"],
         //插件库
-        swiper: "http://lib.baomitu.com/Swiper/4.0.7/js/swiper.min",
+        swiper: "http://lib.baomitu.com/Swiper/4.1.6/js/swiper.min",
         swiper2: "https://cdn.staticfile.org/Swiper/2.7.6/idangerous.swiper", //兼容ie6 ie7
-        echarts: "https://cdn.bootcss.com/echarts/3.8.5/echarts.min",
-        sweetalert: 'https://lib.baomitu.com/limonte-sweetalert2/7.0.7/sweetalert2.min',
+        echarts: "https://cdn.bootcss.com/echarts/4.0.4/echarts.min",
+        sweetalert: 'https://cdn.bootcss.com/limonte-sweetalert2/7.15.0/sweetalert2.min',
         wx: 'http://res.wx.qq.com/open/js/jweixin-1.1.0',
-        popper: 'https://cdn.bootcss.com/popper.js/1.0.8/popper.min',
-        cropper: "https://cdn.bootcss.com/cropper/3.0.0-alpha.1/cropper.min",//图片裁剪插件
+        popper: 'https://cdn.bootcss.com/popper.js/1.13.0/popper.min',
+        cropper: "https://cdn.bootcss.com/cropper/3.1.6/cropper.min",//图片裁剪插件
         layer: "https://cdn.bootcss.com/layer/3.1.0/layer",
         socketIo: 'https://cdn.bootcss.com/socket.io/2.0.4/socket.io.slim',
         dynamics: 'https://cdn.staticfile.org/dynamics.js/1.1.5/dynamics.min',//物理库
@@ -32,6 +32,7 @@ requirejs.config({
         pagination: 'lib/webLib/public/plus/pagination/lib/jquery.pagination',
         wangEditor: "https://cdn.bootcss.com/wangEditor/10.0.13/wangEditor.min",
         lazyload: 'lib/webLib/public/plus/lazyload/lazyload.min',
+        vuelazyload:"https://cdn.bootcss.com/vue-lazyload/1.2.1/vue-lazyload",
         store: 'https://cdn.bootcss.com/store.js/1.3.20/store.min',
         owlCarousel: 'https://cdn.bootcss.com/OwlCarousel2/2.2.1/owl.carousel.min',
 
@@ -63,7 +64,7 @@ requirejs.config({
         anime: 'https://cdn.bootcss.com/animejs/2.2.0/anime.min',
 
         //复制到粘贴板
-        clipboard: 'https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min',
+        clipboard: 'https://cdn.bootcss.com/clipboard.js/2.0.0/clipboard.min',
 
         //单页面切换
         mobilebone: 'https://cdn.bootcss.com/mobilebone/2.6.1/mobilebone.min',
@@ -72,7 +73,7 @@ requirejs.config({
         cookies: 'https://cdn.bootcss.com/js-cookie/2.1.4/js.cookie.min',
 
         //input格式化库 github文档 https://github.com/nosir/cleave.js 官网：http://nosir.github.io/cleave.js/
-        cleave: 'https://cdn.bootcss.com/cleave.js/1.0.1/cleave.min',
+        cleave: 'https://cdn.bootcss.com/cleave.js/1.1.2/cleave.min',
 
         //动画库兼容IE8  http://velocityjs.org/
         velocity: 'https://cdn.bootcss.com/velocity/1.5.0/velocity.min',
@@ -150,15 +151,15 @@ requirejs.config({
         AlloyFinger: {
             exports: 'AlloyFinger'
         },
-        swiper:['css!http://lib.baomitu.com/Swiper/4.0.7/css/swiper.min.css'],
-        sweetalert: ['css!https://lib.baomitu.com/limonte-sweetalert2/7.0.7/sweetalert2.min.css'],
+        swiper:['css!http://lib.baomitu.com/Swiper/4.1.6/css/swiper.min.css'],
+        sweetalert: ['css!https://cdn.bootcss.com/limonte-sweetalert2/7.15.0/sweetalert2.min.css'],
         swiper2: ['css!https://cdn.staticfile.org/Swiper/2.7.6/idangerous.swiper.min.css'],
-        cropper: ['jquery', 'css!https://cdn.bootcss.com/cropper/3.0.0-alpha.1/cropper.min.css'],
+        cropper: ['jquery', 'css!https://cdn.bootcss.com/cropper/3.1.6/cropper.min.css'],
         director: {
             exports: 'Router'
         },
         mobilebone: ['css!https://cdn.bootcss.com/mobilebone/2.6.1/mobilebone.min.css'],
-        cleave: ['https://cdn.bootcss.com/cleave.js/0.7.14/addons/cleave-phone.cn.js'],
+        cleave: ['https://cdn.bootcss.com/cleave.js/1.1.2/addons/cleave-phone.cn.js'],
         lightbox:['css!https://cdn.bootcss.com/lightbox2/2.10.0/css/lightbox.min.css'],
         swiperScrollbar:['swiper2'],
         smartPhoto:['css!../other/smartPhoto/smartphoto.min.css'],
