@@ -9,4 +9,4 @@ module.exports = function(config){
     var url = 'http://' + path.join(remotePath, config['projectName'], 'dist/html/').replace(/\\/g, '/');
 
     util.log(util.colors.magenta('copy to browser：') + url);
-}
+};

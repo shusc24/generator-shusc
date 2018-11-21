@@ -12,7 +12,6 @@ var postcss = require('gulp-postcss'); // CSS 预处理
 var posthtml = require('gulp-posthtml'); // HTML 预处理
 // var sass = require('gulp-sass');
 var webpack = require('webpack-stream');
-var polyfill = require('babel-polyfill');
 var babel = require('gulp-babel');
 var parseSVG = require('./common/parseSVG');
 var svgSymbol = require('gulp-svg-sprite');
@@ -293,7 +292,7 @@ module.exports = function(gulp, config) {
             case 'vue':
                 setTimeout(function() {
                     reloadHandler();
-                }, 300)    
+                }, 300);
                 break;
         }
 
@@ -353,7 +352,6 @@ module.exports = function(gulp, config) {
         cb();
     }
 
-   
 
     //加载插件
     function loadPlugin(cb) {

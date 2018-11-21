@@ -14,7 +14,7 @@ module.exports = function (options) {
 	return through.obj(function (file, enc, cb) {
 
         var _this = this;
-        
+
 
         if (file.isNull()) {
             cb(null, file);
@@ -33,4 +33,4 @@ module.exports = function (options) {
             }
         }
     });
-}
+};

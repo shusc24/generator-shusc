@@ -22,7 +22,7 @@ module.exports = function (options) {
                 });
             }
         });
-    }
+    };
 
     var mkdirone = false;
     var marchRegInline = /<img.*?src=['"].*?(\w+)\.svg\?i['"].*?>/gi;
@@ -103,7 +103,7 @@ module.exports = function (options) {
                         replaceData = base(contents);
                     }
                 }
-                
+
                 contents = contents.replace(regData[i], replaceData);
 
             }
@@ -114,7 +114,7 @@ module.exports = function (options) {
     return through.obj(function (file, enc, cb) {
 
         var _this = this;
-        
+
 
         if (file.isNull()) {
             cb(null, file);
@@ -141,7 +141,7 @@ module.exports = function (options) {
                     regData = contents.match(marchRegBase);
                     contents = run(regData,contents,marchRegBase);
                 }
-                
+
 
                 _this.push(new File({
                     base: file.base,
@@ -154,4 +154,4 @@ module.exports = function (options) {
             }
         }
     });
-}
+};

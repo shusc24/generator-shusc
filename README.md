@@ -16,10 +16,6 @@
 3.命令行 yo shusc 选择模板 安装依赖 (标准模版依赖tmt-workflow 工作流) <br/>
 4.标准模版使用 AMD + webpack 加载方式 使用npm run dev 进行dev 操作 <br/>
 
-### 注意
-
-tmt-workflow 不是完全版 改了 去除了 scss 编译和 雪碧图合并 兼容了 node 8* 等 tmt-workflow 兼容node 8 再改回
-
 ### require.config文件中的插件
  ### 1.布局插件
   

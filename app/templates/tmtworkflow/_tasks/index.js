@@ -3,9 +3,6 @@ var path = require('path');
 var config = require('rc')('tmtworkflow', {
     projectName: process.cwd().split(path.sep).pop()
 });
-var defaultConfig = require("./config");
-
-config = Object.assign(config,defaultConfig);
 
 module.exports = function (gulp) {
     fs.readdirSync(__dirname).filter(function (file) {

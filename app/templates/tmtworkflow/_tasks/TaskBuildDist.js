@@ -25,7 +25,7 @@ var revDel = require('gulp-rev-delete-original');
 var changed = require('./common/changed')();
 var webpack = require('webpack-stream');
 var babel = require('gulp-babel');
-var sourcemaps =require('gulp-sourcemaps')
+var sourcemaps = require('gulp-sourcemaps');
 
 //svg转换用到的组件
 var fs = require('fs');
@@ -110,7 +110,7 @@ module.exports = function(gulp, config) {
         file = file || paths['src'][type];
         if(type !== "other"){
             return gulp.src(file)
-               
+
                 .pipe(gulp.dest(paths.dist.dir))
         }else{
             return gulp.src(file)
@@ -243,11 +243,11 @@ module.exports = function(gulp, config) {
 
     //html 编译
     function compileHtml() {
-        copyOther()
+        copyOther();
         return gulp.src(paths.src.html)
             .pipe(ejs(ejshelper()))
             .pipe(gulpif(
-                config.supportREM, 
+                config.supportREM,
                 posthtml(
                     posthtmlPx2rem({
                         rootValue: 20,

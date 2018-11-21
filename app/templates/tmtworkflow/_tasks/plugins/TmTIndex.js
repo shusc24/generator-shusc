@@ -106,4 +106,4 @@ module.exports = function (config) {
         if (err) console.log(err);
     });
     out.end();
-}
+};
